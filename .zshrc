@@ -3,7 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/sugar/.oh-my-zsh"
-export PATH=$PATH:~/.local/bin
+export PATH=/home/sugar/.local/bin/:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,9 +98,28 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim"
-alias viw="vim .config/i3/config"
 
-export GTK_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export QT_IM_MODULE=fcitx
+# *********************************************
+# **************** MY ALIAS *******************
+# *********************************************
+
+# open ranger
+alias ra='ranger'
+
+# edit my i3 config
+alias viw='vim ~/.config/i3/config'
+
+# clear
+alias cl='clear'
+
+# close screenkey
+alias csk='pkill -f screenkey'
+
+# edit the neovim init.vim
+alias viv='vim ~/.config/nvim/init.vim'
+
+# edit the zsh
+alias viz='vim ~/.zshrc'
+
+# open neofetch
+alias nf='neofetch'
