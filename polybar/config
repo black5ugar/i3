@@ -34,7 +34,7 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -56,7 +56,7 @@ font-0 = "WenQuanYi Micro Hei:pixelsize=10;1"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = "Wuncon Siji:pixelsize=16:style=Regular;2"
 
-modules-left = bspwm i3
+modules-left = i3 title
 modules-center = mpd
 modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
@@ -80,7 +80,18 @@ cursor-scroll = ns-resize
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+;label = %title%
+
+format = <label>
+format-backgroud = #00000000
+format-foreground = #000
+format-padding = 4
+
+lable = %title%
+lable-maxlen = 50
+
+lable-empty = Empty
+lable-empty-foreground = #707880
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -187,7 +198,7 @@ type = internal/xbacklight
 format = <label> <bar>
 label = BL
 
-bar-width = 7
+bar-width = 5
 bar-indicator = |
 bar-indicator-foreground = #fff
 bar-indicator-font = 2
@@ -241,25 +252,25 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
-[module/eth]
-type = internal/network
-interface = sit0
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;[module/eth]
+;type = internal/network
+;interface = wlo1
+;interval = 3.0
+;
+;format-connected-underline = #55aa55
+;format-connected-prefix = " "
+;format-connected-prefix-foreground = ${colors.foreground-alt}
+;label-connected = %local_ip%
+;
+;format-disconnected =
+;;format-disconnected = <label-disconnected>
+;;format-disconnected-underline = ${self.format-connected-underline}
+;;label-disconnected = %ifname% disconnected
+;;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 date =
 date-alt = " %Y-%m-%d"
@@ -370,7 +381,28 @@ menu-0-0 = reboot
 menu-0-0-exec = reboot
 menu-0-1 = power off
 menu-0-1-exec = poweroff
-menu-0-2 = cancle
+menu-0-2 = cancel
+
+[module/title]
+type = internal/xwindow
+; Available tags:
+;   <label> (default)
+format = <label>
+format-background = #0000000
+format-foreground = #ffffff
+format-padding = 4
+
+; Available tokens:
+;   %title%
+; Default: %title%
+label = %title%
+label-maxlen = 50
+
+; Used instead of label when there is no window title
+; Available tokens:
+;   None
+label-empty = Have a nice day :)
+label-empty-foreground = #ffffff
 
 
 [settings]
