@@ -100,8 +100,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # *********************************************
-# **************** MY ALIAS *******************
+# **************** MY CONFIG ******************
 # *********************************************
+
+# set the zsh in vi mode
+bindkey -v
+bindkey -M vicmd "H" vi-beginning-of-line
+bindkey -M vicmd "L" vi-end-of-line
 
 # open ranger
 alias ra='ranger'
@@ -111,6 +116,7 @@ alias viw='vim ~/.config/i3/config'
 
 # clear
 alias cl='clear'
+alias cdl='cd && cl'
 
 # close screenkey
 alias csk='pkill -f screenkey'
@@ -121,5 +127,14 @@ alias viv='vim ~/.config/nvim/init.vim'
 # edit the zsh
 alias viz='vim ~/.zshrc'
 
+# edit the polybar
+alias vip='vim ~/.config/polybar/config'
+
 # open neofetch
 alias nf='neofetch'
+
+# back to updir
+alias b='cd ..'
+
+# connect to wifi
+alias w='sudo wifi-menu'
