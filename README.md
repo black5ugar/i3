@@ -1,5 +1,5 @@
 # i3wm config
-this is my i3wm config 
+this is my i3wm config files  
 created by blacksugar
 
 ## Introduction
