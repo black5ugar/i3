@@ -201,7 +201,7 @@ bindsym $mod+m exec netease-cloud-music
 bindsym $mod+o exec dolphin
 bindsym $mod+p exec spectacle
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id ~/Code/Shell/mount.sh
+exec_always --no-startup-id ~/.config/i3/script/mount.sh
 
 # border config
 default_border pixel 0
