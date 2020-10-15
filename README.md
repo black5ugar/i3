@@ -1,4 +1,4 @@
-# i3wm config
+# i3
 this is my i3wm config files  
 created by blacksugar
 
