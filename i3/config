@@ -182,12 +182,15 @@ bindsym $mod+r mode "resize"
 ####################    Myconfig    ####################
 ########################################################
 
+# for the calendar in polybar
+for_window [class="Yad" title="yad-calendar"] floating enable
+
 # set the gaps
 gaps inner 20
 gaps outer 8
 
 # set the background
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/the_girl.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpapers/deer.png
 
 # set the opacity
 exec_always --no-startup-id picom -b
