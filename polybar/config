@@ -55,9 +55,10 @@ module-margin-right = 2
 font-0 = "WenQuanYi Micro Hei:pixelsize=10;1"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = "Wuncon Siji:pixelsize=16:style=Regular;2"
+font-3 = "Dank Mono:pixelsize=12"
 
 modules-left = i3 title
-modules-center = 
+modules-center =  
 modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature calendar powermenu 
 
 tray-position = right
@@ -396,12 +397,14 @@ format-padding = 4
 ;   %title%
 ; Default: %title%
 label = %title%
+label-font = 4
 label-maxlen = 50
 
 ; Used instead of label when there is no window title
 ; Available tokens:
 ;   None
 label-empty = Have a nice day :)
+label-empty-font = 4
 label-empty-foreground = #ffffff
 
 [module/calendar]
