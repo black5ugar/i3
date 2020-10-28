@@ -5,9 +5,9 @@ thanks for 今日诗词 API: https://www.jinrishici.com
 import requests
 import json
 
-burp0_url = "https://v2.jinrishici.com:443/one.json"
-burp0_cookies = {"X-User-Token": "Vh1elUeFAfDsYOjYWxbhq+QFW4Lw4PK7"}
-burp0_headers = {
+url = "https://v2.jinrishici.com:443/one.json"
+cookies = {"X-User-Token": "Vh1elUeFAfDsYOjYWxbhq+QFW4Lw4PK7"}
+headers = {
         "Connection": "close",
         "Upgrade-Insecure-Requests": "1",
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)\
@@ -26,7 +26,7 @@ burp0_headers = {
 }
 
 try:
-    res = requests.get(burp0_url, headers=burp0_headers, cookies=burp0_cookies)
+    res = requests.get(url, headers=headers, cookies=cookies)
     res.encoding = 'utf-8'
 
     # trans to the jsonobj
