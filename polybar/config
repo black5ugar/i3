@@ -58,11 +58,12 @@ font-2 = "Wuncon Siji:pixelsize=16:style=Regular;2"
 font-3 = "Dank Mono:pixelsize=12"
 font-4 = "Dank Mono:pixelsize=12:weight=bold"
 font-5 = "Bradley Hand ITC:pixelsize=13:weight=bold"
+font-6 = "STLiti:pixelsize=15"
 
 
-modules-left = i3 title
-modules-center = isprime 
-modules-right = filesystem xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature calendar powermenu 
+modules-left = i3 title 
+modules-center = poem 
+modules-right = alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature calendar powermenu 
 
 tray-position = right
 tray-padding = 2
@@ -421,11 +422,19 @@ format-prefix-foreground = ${colors.foreground-alt}
 click-left = ~/.config/polybar/scripts/calendar.sh --popup &
 format-underline = #0a6cf5
 
-[module/isprime]
-type = custom/script
-exec = python ~/.config/polybar/scripts/prime.py
+;[module/isprime]
+;type = custom/script
+;exec = python ~/.config/polybar/scripts/prime.py
+;
+;label-font = 5
 
-label-font = 5
+[module/poem]
+type = custom/script
+exec = python ~/.config/polybar/scripts/poem.py
+
+label-font = 7
+
+interval = 60
 
 [settings]
 screenchange-reload = true
