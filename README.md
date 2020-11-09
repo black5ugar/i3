@@ -10,3 +10,4 @@ created by blacksugar
 + **polybar** the status bar
 + **ranger** file manager
 + **Dank Mono** the font that I used in my system
++ **rofi** the window switcher
