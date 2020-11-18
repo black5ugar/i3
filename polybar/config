@@ -63,7 +63,7 @@ font-6 = "STLiti:pixelsize=15"
 
 modules-left = i3 title 
 modules-center = poem 
-modules-right = alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature calendar powermenu 
+modules-right = alsa pulseaudio  memory cpu wlan eth battery temperature calendar powermenu 
 
 tray-position = right
 tray-padding = 2
@@ -430,11 +430,12 @@ format-underline = #0a6cf5
 
 [module/poem]
 type = custom/script
-exec = python ~/.config/polybar/scripts/poem.py
+exec = python ~/.config/polybar/scripts/poem.py > ~/.config/polybar/scripts/poem.txt && cat ~/.config/polybar/scripts/poem.txt 
 
+click-left = chromium "? $(cat ~/.config/polybar/scripts/poem.txt)"
 label-font = 7
 
-interval = 60
+interval = 600
 
 [settings]
 screenchange-reload = true
