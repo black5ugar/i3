@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# Dependencies:
+# yay -S yad xdotool
+# then, enable floating for yad-calendar:
+# for_window [class="Yad" title="yad-calendar"] floating enable
+
 BAR_HEIGHT=22  # polybar height
 BORDER_SIZE=1  # border size from your wm settings
 YAD_WIDTH=222  # 222 is minimum possible value
