@@ -137,4 +137,16 @@ alias nf='neofetch'
 alias b='cd ..'
 
 # connect to wifi
-alias w='sudo wifi-menu'
+alias w='nmcli device wifi list | head -n 10'
+alias conwifi='ConnectWifi(){ nmcli device wifi connect $1 password $2;};ConnectWifi'
+
+# tty-clock
+alias t='tty-clock -s -c'
+
+# proxy
+alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080"
+alias unsetproxy="unset ALL_PROXY"
+
+# fzf config
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
