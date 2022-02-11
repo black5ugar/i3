@@ -30,7 +30,7 @@ alert = #bd2c40
 [bar/mybar]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 27
+height = 35
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 6.0
@@ -54,11 +54,12 @@ module-margin-right = 2
 ;font-0 = fixed:pixelsize=10;1
 font-0 = "WenQuanYi Micro Hei:pixelsize=10;1"
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = "Wuncon Siji:pixelsize=16:style=Regular;2"
-font-3 = "Dank Mono:pixelsize=12"
-font-4 = "Dank Mono:pixelsize=12:weight=bold"
+font-2 = "SymbolsNerdFont:pixelsize=10;1"
+font-3 = "Dank Mono:pixelsize=15"
+font-4 = "Dank Mono:pixelsize=15:weight=bold"
 font-5 = "Bradley Hand ITC:pixelsize=13:weight=bold"
-font-6 = "STLiti:pixelsize=15"
+font-6 = "STLiti:pixelsize=20"
+font-7 = "WenQuanYi Micro Hei:pixelsize=30;1"
 
 
 modules-left = i3 title 
@@ -317,6 +318,7 @@ ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
+lable-font = 3
 type = custom/menu
 
 expand-right = true
@@ -380,7 +382,8 @@ format-underline = #0a6cf5
 type = custom/script
 exec = python ~/.config/polybar/scripts/poem.py > ~/.config/polybar/scripts/poem.txt && cat ~/.config/polybar/scripts/poem.txt 
 
-click-left = chromium "? $(sed 's/——.*//' ~/.config/polybar/scripts/poem.txt)"
+; click-left = chromium "? $(sed 's/——.*//' ~/.config/polybar/scripts/poem.txt)"
+click-left = firefox --search $(sed 's/——.*//' ~/.config/polybar/scripts/poem.txt)
 label-font = 7
 
 interval = 600
