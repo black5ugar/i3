@@ -11,3 +11,15 @@ created by blacksugar
 + **ranger** file manager
 + **Dank Mono** the font that I used in my system
 + **rofi** the window switcher
+
+## 一些配置项记录
+
+### wayland下启用ibus
+`sudo vi /etc/environment`
+
+```
+INPUT_METHOD=ibus
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
