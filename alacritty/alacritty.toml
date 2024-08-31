@@ -1,0 +1,37 @@
+[colors.normal]
+black = "#303030"
+blue = "#81a2be"
+cyan = "#79e5e0"
+green = "#f29db4"
+magenta = "#b294bb"
+red = "#f97070"
+white = "#c5c8c6"
+yellow = "#fce78a"
+
+[colors.search.matches]
+background = "#ffffff"
+foreground = "#000000"
+
+[font.bold]
+family = "Dank Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "Dank Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "Dank Mono"
+style = "Italic"
+
+[font.normal]
+family = "Dank Mono"
+style = "Regular"
+
+[window]
+decorations = "none"
+opacity = 0.84
+
+[window.padding]
+x = 10
+y = 10
