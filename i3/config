@@ -194,23 +194,18 @@ gaps inner 20
 gaps outer 8
 
 # set the background
-exec_always --no-startup-id feh --bg-fill ~/Picture/Wallpaper/the_girl.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/Carnation_Lily_Lily_Rose.jpg
 
 # set the opacity
 exec_always --no-startup-id picom -b
 
-# flameshot
-exec_always --no-startup-id flameshot
 
 # set the input method
-exec_always --no-startup-id fcitx
+exec_always --no-startup-id ibus-daemon -rxRd
 
 # start the applications
 bindsym $mod+c exec chromium
-bindsym $mod+m exec netease-cloud-music
-bindsym $mod+o exec nemo
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec_always --no-startup-id ~/.config/i3/script/mount.sh
 
 # border config
 default_border pixel 0
