@@ -35,3 +35,6 @@ opacity = 0.84
 [window.padding]
 x = 10
 y = 10
+
+[env]
+WINIT_X11_SCALE_FACTOR = "2"
