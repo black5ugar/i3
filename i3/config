@@ -210,13 +210,15 @@ bindsym $mod+w exec wechat
 bindsym $mod+o exec nemo
 
 # open the music player
-bindsym $mod+m exec spotify
+#bindsym $mod+m exec spotify
+bindsym $mod+m exec qqmusic
 
 # border config
 default_border pixel 0
 
 # lock screen
 bindsym $mod+x exec "i3lock -i ~/Pictures/Wallpapers/lanting.png"
+
 
 # backlight
 # 增加亮度
